@@ -1,0 +1,10 @@
+@media (max-width:992px) {
+   .signup{
+      margin-top: 30% !important;
+   }
+}
+@media (min-width:993px) and (max-width:1200px) {
+   .signup{
+      margin-top: 20% !important;
+   }
+}

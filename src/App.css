@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: rgb(229, 251, 251);
+  --pry-color: teal;
+  --color-white: #fff;
+  --color-black: #000;
+  --border: #00000032;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: cursive, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bg-color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.link {
+  color: inherit;
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
+.content {
+  padding: 10em 0;
+  height: calc(88vh - 10px);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskManager {
+  margin-top: 0px;
+}
+.head {
+  background-color: var(--pry-color) !important;
+  color: var(--color-white);
+}
+.Btn {
+  background-color: var(--pry-color) !important;
+  font-size: 18px !important;
+  border: 1px solid var(--pry-color);
+  outline: none;
+}
+.closeBtn a {
+  color: var(--color-black) !important;
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }

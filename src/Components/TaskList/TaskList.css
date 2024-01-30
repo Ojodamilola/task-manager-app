@@ -1,0 +1,55 @@
+.taskListStyle{
+   border: 1px solid var(--border);
+   border-radius: 10px;
+   margin-top: 100px;
+   padding: 16px;
+   max-width: 400px;
+   color: var(--color-black);
+   background-color: var(--color-white);
+   
+}
+.taskListStyle h1{
+   text-align: center;
+   
+}
+
+.taskDiv{
+   border: 1px solid var(--border);
+   padding: 10px;
+   background-color: var(--color-white);
+   margin-top: 20px;
+   border-radius: 20px;
+   position: relative;
+   box-shadow: 1px 1px 1px #000;
+   z-index: 1;
+   
+}
+.taskDiv h4{
+   font-size: 28px ;
+   margin-top: 5px;
+}
+.taskInfo{
+   position: absolute;
+   right: 25px;
+   top: 15px;
+   font-size: 18px;
+
+
+}
+.taskInfoDiv{
+   background-color: white;
+   border: 1px solid  var(--border);
+   padding: 10px;
+   position: absolute;
+height: 120px;
+width: 150px;
+top: 20%;
+right: 20px; 
+line-height: 1.2;
+}
+.taskComment{
+   border: 1px solid teal;
+   padding: 10px;
+border-radius: 10px;
+box-shadow: 1px 1px 1px #000;
+}
