@@ -8,7 +8,7 @@ const TaskComments = ({ taskId, }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const commentsCollectionRef = collection(db, 'tasks', taskId, 'comments');
-  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
    console.log('correctly triigered')
    // Subscribe to the Firestore collection when the component mounts
@@ -21,18 +21,18 @@ const TaskComments = ({ taskId, }) => {
      console.log('Updated Comments:', updatedComments);
      
     setComments(updatedComments);
-    setLoading(false);
+   
     
-   });
+   }, []);
 
    // Unsubscribe when the component unmounts
    return () => unsubscribe();
- }, [taskId]); 
+ }, [taskId, commentsCollectionRef]); 
 
  
 
   // Add a comment
-  const addComment = async (text) => {
+  const addComment = async () => {
     try {
       if (newComment.trim() !== '') {
          const newCommentRef = await addDoc(commentsCollectionRef, { text: { content: newComment }, userId: 'currentUserId' });

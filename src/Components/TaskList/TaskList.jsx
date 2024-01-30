@@ -1,22 +1,21 @@
 import React, { useState } from "react";
-import { Form, Button, Card, Alert, Row, Col } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
 import TaskComments from "../TaskComment/TaskComment";
 import AssignTaskButton from "../AssignTaskButton/AssignTaskButton";
 import { Timestamp } from "firebase/firestore";
 import "./TaskList.css";
-import { ArrowDown, ChevronDown, ChevronUp } from 'react-bootstrap-icons';
+import {  ChevronDown, ChevronUp } from 'react-bootstrap-icons';
 
 const TaskList = ({
   tasks,
   handleDeleteTask,
-  handleToggleCompletion,
   handleEditTask,
   loading,
+  setFilterCompleted,
+  filterCompleted,
 }) => {
   const [taskInfo, setTaskInfo] = useState(false);
   const [showComment, setShowComment] = useState(false);
-
-  const [filterCompleted, setFilterCompleted] = useState(false);
   const [selectedTaskId, setSelectedTaskId] = useState(null);
 
   const handleTaskInfo = (taskId) => {

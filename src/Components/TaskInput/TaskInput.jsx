@@ -1,17 +1,16 @@
 import React, {useState} from "react";
-import { Form, Button, Card, Alert, Row, Col } from "react-bootstrap";
-import { format } from "date-fns";
+import { Form, Button,  } from "react-bootstrap";
+
 import './TaskInput.css';
 
-const TaskInput = ({handleSubmitTask, handleUpdateTask}) => {
+const TaskInput = ({handleSubmitTask, handleUpdateTask, editingTask}) => {
    const [newTask, setNewTask] = useState({
       title: "",
       description: "",
       dueDate: "",
     });
-    const [filterCompleted, setFilterCompleted] = useState(false);
 
-  const [editingTask, setEditingTask] = useState(null);
+
   const [updatedTitle, setUpdatedTitle] = useState("");
   const [updatedDescription, setUpdatedDescription] = useState("");
   const [updatedDueDate, setUpdatedDueDate] = useState("");

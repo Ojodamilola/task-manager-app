@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   collection,
-  doc,
+  
   addDoc,
   getDoc,
   updateDoc,
@@ -13,8 +13,6 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase"; // Import your Firestore configuration
 import { format } from "date-fns";
-import AssignTaskButton from "./AssignTaskButton/AssignTaskButton";
-import TaskComments from "./TaskComment/TaskComment";
 import TaskList from "./TaskList/TaskList";
 import TaskInput from "./TaskInput/TaskInput";
 
@@ -173,6 +171,9 @@ const TaskManager = () => {
                 handleToggleCompletion={handleToggleCompletion}
                 handleEditTask={handleEditTask}
                 loading={loading}
+                editingTask={editingTask}
+                filterCompleted={filterCompleted}
+                setFilterCompleted={setFilterCompleted}
               />
             </div>
           </Col>
